@@ -1,17 +1,29 @@
 {
-    "name": "mimaen/simplesamlphp-module-hubandspoke",
-    "description": "SimpleSAMLphp utilities for Hub & Spoke federations",
+    "name": "informaticauco/simplesamlphp-module-hubandspoke",
+    "description": "SimpleSAMLphp 2.x utilities for Hub & Spoke federations (eduPersonTargetedID)",
     "type": "simplesamlphp-module",
-    "license": "LGPL-2.1",
+    "license": "LGPL-2.1-only",
     "authors": [
         {
             "name": "Miguel Macías Enguídanos",
             "email": "mimaen@inf.upv.es"
+        },
+        {
+            "name": "Sergio Gómez",
+            "email": "sergio@uco.es"
         }
     ],
     "keywords": ["SAML", "SimpleSAMLphp", "Hub-and-Spoke", "IdP", "SP", "eduPersonTargetedId"],
-    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "SimpleSAML\\Module\\hubandspoke\\": "src/"
+        }
+    },
     "require": {
-        "simplesamlphp/composer-module-installer": "~1.0"
+        "php": ">=8.2",
+        "simplesamlphp/composer-module-installer": "^1.3"
+    },
+    "require-dev": {
+        "simplesamlphp/simplesamlphp": "^2.5"
     }
 }

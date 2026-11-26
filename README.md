@@ -1,6 +1,25 @@
-#Hub & Spoke utilities for SimpleSAMLphp
+# Hub & Spoke utilities for SimpleSAMLphp
 
-##TargetedID
+> **Fork notice:** This repository is a maintained fork of [mimaen/simplesamlphp-module-attributes](https://github.com/mimaen/simplesamlphp-module-attributes) (`mimaen/simplesamlphp-module-hubandspoke`, originally created by Miguel Macías Enguídanos, UPV), updated by the University of Córdoba (`InformaticaUCO`) for **SimpleSAMLphp 2.5+** and **PHP 8.2+** while preserving byte-for-byte compatibility with the original `eduPersonTargetedID` hash calculation.
+>
+> - **`main` branch (`v2.5.x`)**: SimpleSAMLphp 2.5+ / PHP 8.2+ (`informaticauco/simplesamlphp-module-hubandspoke`).
+> - **`1.x` branch (`v1.19.0`)**: Legacy SimpleSAMLphp 1.x code (preserved as-is from upstream).
+
+## Installation
+
+```bash
+composer require informaticauco/simplesamlphp-module-hubandspoke:^2.5
+```
+
+Enable the module in `config/config.php`:
+
+```php
+'module.enable' => [
+    'hubandspoke' => true,
+],
+```
+
+## TargetedID
 
 A flexible way for generate one or more values for the [eduPersonTargetedId attribute](http://software.internet2.edu/eduperson/internet2-mace-dir-eduperson-201602.html#eduPersonTargetedID).
 
